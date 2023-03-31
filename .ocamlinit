@@ -1,0 +1,11 @@
+UTop.set_auto_run_lwt false;;
+#require "re";;
+#require "csv";;
+#require "csv-lwt";;
+#require "lwt.unix";;
+#require "lwt_ppx";;
+#require "cohttp-lwt-unix";;
+open Cohttp
+open Cohttp_lwt
+open Cohttp_lwt_unix
+(* #use "tenhou_img.ml" *)
