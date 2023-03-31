@@ -1,5 +1,15 @@
+(library
+ (name const)
+ (modules const))
+
+(library
+ (name mpsz)
+ (modules mpsz)
+ (libraries const re))
+
 (executable
  (name tenhou_img)
- (libraries csv-lwt re lwt.unix cohttp cohttp-lwt cohttp-lwt-unix)
+ (modules tenhou_img)
+ (libraries const mpsz csv-lwt cohttp-lwt-unix)
  (preprocess
   (pps lwt_ppx)))
