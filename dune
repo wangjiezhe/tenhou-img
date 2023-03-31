@@ -1,0 +1,5 @@
+(executable
+ (name tenhou_img)
+ (libraries csv-lwt re lwt.unix cohttp cohttp-lwt cohttp-lwt-unix)
+ (preprocess
+  (pps lwt_ppx)))

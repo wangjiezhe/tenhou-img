@@ -60,11 +60,11 @@ def encode(t):
 
 ## function `compile` in https://tenhou.net/2/img/
 def compile(row):
-    q = extract34(expand(row.tehai))
+    q = encode(row.tehai)
     if len(q) != 14 * 2:
         raise Exception("INVALID TEHAI LENGTH")
     if not TEHAIONLY:
-        dora = extract34(expand(row.dora))
+        dora = encode(row.dora)
         kyoku = str(row.kyoku - 1).zfill(2)  # 局数
         step = str(row.step).zfill(2)  # 巡目
         rot = str(row.rot - 1)  # 自风
