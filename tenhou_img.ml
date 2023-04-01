@@ -43,4 +43,6 @@ let download_csv (csv_file : string) : unit Lwt.t =
   in
   Lwt_list.iteri_s f rows
 
-let () = Lwt_main.run (Lwt.join [ Lwt_io.printl ""; download_csv csv_301 ])
+let () =
+  Lwt_main.run
+    (Lwt.join [ Lwt_io.printl ""; download_csv csv_301; download_csv csv_300 ])
